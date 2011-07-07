@@ -182,7 +182,7 @@
 			if (this.data('extendedprogressbar_options')['infinite'] == true) {
 				this.children('.bars_holder').children('.normal_progress').width(this.width());
 				this.children('.bars_holder').children('.normal_progress').height(this.height());
-				this.children('.bars_holder').children('.normal_progress').css('background-color', 'transparent');
+				this.children('.bars_holder').children('.normal_progress').css('background-color', this.data('extendedprogressbar_options')['normal_color']);
 				this.children('.bars_holder').children('.normal_progress').addClass('full_radius');
 				if (!this.children('.bars_holder').children('.normal_progress').hasClass('infinite_bar')) {
 					this.children('.bars_holder').children('.normal_progress').addClass('infinite_bar');
@@ -256,7 +256,7 @@
 			if (this.data('extendedprogressbar_options')['infinite'] == true) {
 				this.children('.bars_holder').children('.normal_progress').width(this.width());
 				this.children('.bars_holder').children('.normal_progress').height(this.height());
-				this.children('.bars_holder').children('.normal_progress').css('background-color', 'transparent');
+				this.children('.bars_holder').children('.normal_progress').css('background-color', this.data('extendedprogressbar_options')['normal_color']);
 				this.children('.bars_holder').children('.normal_progress').addClass('full_radius');
 				if (!this.children('.bars_holder').children('.normal_progress').hasClass('infinite_bar')) {
 					this.children('.bars_holder').children('.normal_progress').addClass('infinite_bar');
