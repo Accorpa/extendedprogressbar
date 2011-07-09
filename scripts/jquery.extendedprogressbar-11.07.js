@@ -180,8 +180,31 @@
 		 	=-=-=First - Check if Infinite=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 		 	=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 			if (this.data('extendedprogressbar_options')['infinite'] == true) {
-				this.children('.bars_holder').children('.normal_progress').width(this.width());
-				this.children('.bars_holder').children('.normal_progress').height(this.height());
+				var ua = $.browser;
+				if (ua.msie && ua.version.slice(0,1) == '8') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 2);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 2);
+					this.children('.full_horizontal_bar').width(this.width() - 2);
+					this.children('.full_vertical_bar').height(this.height() - 2);
+				}
+				else if (ua.msie && ua.version.slice(0,1) == '7') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 4);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 4);
+					this.children('.full_horizontal_bar').width(this.width() - 4);
+					this.children('.full_vertical_bar').height(this.height() - 4);
+				}
+				else if (ua.msie && ua.version.slice(0,1) == '6') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 4);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 4);
+					this.children('.full_horizontal_bar').width(this.width() - 4);
+					this.children('.full_vertical_bar').height(this.height() - 4);
+				}
+				else {
+					this.children('.bars_holder').children('.normal_progress').width(this.width());
+					this.children('.bars_holder').children('.normal_progress').height(this.height());
+					this.children('.full_horizontal_bar').width(this.width());
+					this.children('.full_vertical_bar').height(this.height());
+				}
 				this.children('.bars_holder').children('.normal_progress').css('background-color', this.data('extendedprogressbar_options')['normal_color']);
 				this.children('.bars_holder').children('.normal_progress').addClass('full_radius');
 				if (!this.children('.bars_holder').children('.normal_progress').hasClass('infinite_bar')) {
@@ -198,8 +221,6 @@
 				if (this.data('extendedprogressbar_options')['tooltip'] == true) {
 					this.attr('title', 'loading...');
 				}
-				this.children('.full_horizontal_bar').width(this.width());
-				this.children('.full_vertical_bar').height(this.height());
 				return;
 			}
 			/*-----------------------------------------------------------------
@@ -254,8 +275,31 @@
 		 	=-=-=First - Check if Infinite=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 		 	=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 			if (this.data('extendedprogressbar_options')['infinite'] == true) {
-				this.children('.bars_holder').children('.normal_progress').width(this.width());
-				this.children('.bars_holder').children('.normal_progress').height(this.height());
+				var ua = $.browser;
+				if (ua.msie && ua.version.slice(0,1) == '8') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 2);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 2);
+					this.children('.full_horizontal_bar').width(this.width() - 2);
+					this.children('.full_vertical_bar').height(this.height() - 2);
+				}
+				else if (ua.msie && ua.version.slice(0,1) == '7') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 4);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 4);
+					this.children('.full_horizontal_bar').width(this.width() - 4);
+					this.children('.full_vertical_bar').height(this.height() - 4);
+				}
+				else if (ua.msie && ua.version.slice(0,1) == '6') {
+					this.children('.bars_holder').children('.normal_progress').width(this.width() - 4);
+					this.children('.bars_holder').children('.normal_progress').height(this.height() - 4);
+					this.children('.full_horizontal_bar').width(this.width() - 4);
+					this.children('.full_vertical_bar').height(this.height() - 4);
+				}
+				else {
+					this.children('.bars_holder').children('.normal_progress').width(this.width());
+					this.children('.bars_holder').children('.normal_progress').height(this.height());
+					this.children('.full_horizontal_bar').width(this.width());
+					this.children('.full_vertical_bar').height(this.height());
+				}
 				this.children('.bars_holder').children('.normal_progress').css('background-color', this.data('extendedprogressbar_options')['normal_color']);
 				this.children('.bars_holder').children('.normal_progress').addClass('full_radius');
 				if (!this.children('.bars_holder').children('.normal_progress').hasClass('infinite_bar')) {
@@ -272,8 +316,6 @@
 				if (this.data('extendedprogressbar_options')['tooltip'] == true) {
 					this.attr('title', 'loading...');
 				}
-				this.children('.full_horizontal_bar').width(this.width());
-				this.children('.full_vertical_bar').height(this.height());
 				return;
 			}
 			/*-----------------------------------------------------------------
@@ -476,15 +518,15 @@
 		var overall_width = thisObject.width();
 		var overall_height = thisObject.height();
 		var ua = $.browser;
-		if (ua.msie && ua.version.slice(0,1) == '8') { //la sama7 Allah
+		if (ua.msie && ua.version.slice(0,1) == '8') {
 			overall_width = overall_width - 2;
 			overall_height = overall_height - 2;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '7') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '7') {
 			overall_width = overall_width - 4;
 			overall_height = overall_height - 4;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '6') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '6') {
 			overall_width = overall_width - 4;
 			overall_height = overall_height - 4;
 		}
@@ -755,15 +797,15 @@
 		var overall_width = thisObject.width();
 		var overall_height = thisObject.height();
 		var ua = $.browser;
-		if (ua.msie && ua.version.slice(0,1) == '8') { //la sama7 Allah
+		if (ua.msie && ua.version.slice(0,1) == '8') {
 			overall_width = overall_width - 2;
 			overall_height = overall_height - 2;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '7') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '7') {
 			overall_width = overall_width - 4;
 			overall_height = overall_height - 4;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '6') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '6') {
 			overall_width = overall_width - 4;
 			overall_height = overall_height - 4;
 		}
@@ -1046,15 +1088,15 @@
 		var overall_height = thisObject.height();
 		var overall_width = thisObject.width();
 		var ua = $.browser;
-		if (ua.msie && ua.version.slice(0,1) == '8') { //la sama7 Allah
+		if (ua.msie && ua.version.slice(0,1) == '8') {
 			overall_height= overall_height - 2;
 			overall_width = overall_width - 2;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '7') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '7') {
 			overall_height = overall_height - 4;
 			overall_width = overall_width - 4;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '6') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '6') {
 			overall_height = overall_height - 4;
 			overall_width = overall_width - 4;
 		}
@@ -1315,15 +1357,15 @@
 		var overall_height = thisObject.height();
 		var overall_width = thisObject.width();
 		var ua = $.browser;
-		if (ua.msie && ua.version.slice(0,1) == '8') { //la sama7 Allah
+		if (ua.msie && ua.version.slice(0,1) == '8') {
 			overall_height= overall_height - 2;
 			overall_width = overall_width - 2;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '7') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '7') {
 			overall_height = overall_height - 4;
 			overall_width = overall_width - 4;
 		}
-		else if (ua.msie && ua.version.slice(0,1) == '6') { //A3oozo be Allah
+		else if (ua.msie && ua.version.slice(0,1) == '6') {
 			overall_height = overall_height - 4;
 			overall_width = overall_width - 4;
 		}
